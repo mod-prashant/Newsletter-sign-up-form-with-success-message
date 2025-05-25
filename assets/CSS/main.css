@@ -99,16 +99,20 @@ main{
 }
 
 /* Form-content-input */
-label{
-    display: inline-flex;
-    width: 100%;
-    flex-direction: column;
-    
+.label-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0.5rem;
 }
-.wrong{
-    text-align: right;
-    display: none;
+
+.wrong {
+  font-size: 0.9rem;
+  color: var(--Red);
+  display: none;
 }
+
 #form input{
     display: inline-block;
     width: 100%;
@@ -116,6 +120,11 @@ label{
     color: var(--Grey);
     border: solid 1px var(--Grey);
     border-radius: 0.5rem;
+}
+#form input:focus {
+  border-color: var(--Blue800);
+  border-width: 2px;
+  outline: none;
 }
 #form input:hover{
     border-color: var(--Blue800);
@@ -173,8 +182,17 @@ button:hover{
 .show{
     display: flex !important;
 }
-.error{
-    color: var(--Red) !important;
-    border-color: var(--Red) !important;
-    background-color: var(--Red) !important;
+.show_error{
+    display: block !important;
+}
+.error {
+  background-color: rgba(255, 0, 0, 0.15);
+  backdrop-filter: blur(2px);
+  border-color: var(--Red) !important; 
+}
+
+input.error:focus {
+  border-color: var(--Red);
+  border-width: 2px !important;
+  outline: none;
 }
