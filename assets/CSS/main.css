@@ -157,6 +157,7 @@ button:hover{
     gap: 1rem;
     padding: 2rem;
     background-color: var(--White);
+    color: var(--Blue800);
     border-radius: 2rem;
 }
 .success-popup img{
@@ -168,6 +169,7 @@ button:hover{
     font-size: 3rem;
 }
 .success-popup button{
+    width: 100%;
     background-color: var(--Blue800);
     color: var(--White);
     padding: 1rem;
@@ -195,4 +197,74 @@ input.error:focus {
   border-color: var(--Red);
   border-width: 2px !important;
   outline: none;
+}
+
+/* MOBILE Layout*/
+@media (max-width: 768px) {
+    body{
+        background-color: var(--White);
+        padding: 0;
+    }
+    main{
+        min-height: 100vh;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+        /* form popup */
+    .form-popup{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 0;
+        border-radius: 2rem;
+    }
+
+    /* form image */
+    .form-image{
+        order: 1;
+    }
+    .form-image img{
+        height: 100%;
+        width: 100%;
+        border-radius: 0 0 1rem 1rem;
+        display: block;
+    }
+
+    /* form content */
+    .form-content{
+        order: 2;
+        padding: 1.5rem;
+    }
+    .form-content h1{        
+        font-size: 2.5rem;
+        line-height: 6rem;
+        text-align: left;
+    }
+    /* success popup */
+    .success-popup{
+        max-width: 100%;
+        min-height: 100vh;
+        display: none; 
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 1.5rem;
+        border-radius: 0;
+    }
+    .success-popup img{
+        width: 20%;
+        height: 20%;
+        display: block;
+    }
+    .success-popup h1{
+        font-size: 2.5rem;
+    }
+    .success-popup button{
+        margin-top: auto;
+    }
+
 }
