@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <!-- importing font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- importing files -->
+    <link rel="stylesheet" href="assets/CSS/main.css">
+    <script src="assets/JS/main.js" defer></script>
+</head>
+<body>
+  <main>
+    <section class="form-popup">
+      <figure class="form-image">
+        <img src="assets/images/illustration-sign-up-desktop.svg" alt="sign-up image">
+      </figure>
+      <div class="form-content">
+        <h1>Stay updated!</h1>
+
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+
+        <ul>
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+        
+        <form id="form" novalidate >
+          <label for="email">
+            Email address
+            <div class="wrong">Valid email requiered</div>
+          </label>
+          
+          <input name="email" type="email" placeholder="email@company.com">
+          <button>Subscribe to monthly newsletter</button>
+        </form>
+      </div>
+    </section>
+    <section class="success-popup">
+      <img src="assets/images/icon-success.svg" alt="success icon">
+      <h1>Thanks for subscribing!</h1>
+
+      <p>A confirmation email has been sent to <strong class="userEmail">ash@loremcompany.com</strong>. 
+      Please open it and click the button inside to confirm your subscription.</p>
+
+      <button id="Dismiss">Dismiss message</button>
+    </section>
+  </main>
+</body>
+</html>
